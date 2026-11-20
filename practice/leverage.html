@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#E4B42F">
+  <title>Плечо и маржа: бесплатное учебное упражнение — insweep</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="game.css">
+  <link rel="stylesheet" href="comic.css">
+  <link rel="stylesheet" href="leverage.css">
+  <link rel="stylesheet" href="babushka.css">
+  <link rel="stylesheet" href="babushka-leverage.css">
+  <link rel="stylesheet" href="mascot-reactions.css">
+  <link rel="stylesheet" href="personal-practice.css">
+  <link rel="stylesheet" href="brand.css">
+  <link rel="stylesheet" href="background.css?v=9">
+  <script src="leverage.js" defer></script>
+  <script src="rewards.js" defer></script>
+  <script src="mascot.js" defer></script>
+  <script src="position.js" defer></script>
+  <script src="plan.js" defer></script>
+  <script src="review.js" defer></script>
+  <script src="review-store.js" defer></script>
+  <script src="leverage-ui.js" defer></script>
+<meta name="description" content="Сравни количество, плечо, основную маржу и результат с комиссиями на условных ценах. Отдельное упражнение insweep для начинающих."><meta name="robots" content="index,follow"><link rel="canonical" href="https://getinsweep.com/practice/leverage.html"><meta property="og:type" content="website"><meta property="og:title" content="Плечо и маржа: бесплатное учебное упражнение — insweep"><meta property="og:description" content="Сравни количество, плечо, основную маржу и результат с комиссиями на условных ценах. Отдельное упражнение insweep для начинающих."><meta property="og:url" content="https://getinsweep.com/practice/leverage.html"><meta property="og:image" content="https://getinsweep.com/practice/assets/brand/insweep-logo.jpg"><link rel="stylesheet" href="portal-return.css"><script type="module" src="/assets/funnel.js"></script></head>
+<body class="leverage-page"><nav class="portal-return" aria-label="Портал insweep"><a href="/">← Портал insweep</a><a href="/glossary/">Словарь</a><a href="/tools/position-size/">Калькулятор</a><a href="https://t.me/+OGSgiII0NUNjNTI6" target="_blank" rel="noopener noreferrer" data-telegram data-placement="header">Telegram ↗</a></nav>
+  <header class="header">
+    <a class="brand" href="index.html" aria-label="insweep — к учебному маршруту"><img class="brand-logo" src="assets/brand/insweep-logo.jpg" width="196" height="48" alt="insweep"><span class="brand-sub">playground</span></a>
+    <div class="header-right"><div class="game-header-stats" aria-label="Общий игровой прогресс"><span class="xp-pill"><strong id="xp-total">0</strong> XP</span><span class="level-pill">Уровень <strong id="level-number">1</strong></span></div></div>
+  </header>
+  <main class="leverage-main">
+    <a id="back-to-replay" class="lesson-back" href="index.html">← К учебному маршруту</a>
+    <section class="leverage-hero" aria-labelledby="leverage-title">
+      <div><div class="eyebrow">ОПЫТЫ С ЧИСЛАМИ · 3 ШАГА</div><h1 id="leverage-title">Плечо меняет<br><span>не всё.</span></h1><p>Сравни количество, обеспечение и денежный риск.<br>Найди, что остаётся прежним, когда меняется плечо.</p></div>
+      <div class="leverage-mascot" aria-hidden="true"><img src="assets/mascot-variants/poses-v1/babushka-dance.png" alt=""><span>Сначала количество.<br>Потом плечо.</span></div>
+    </section>
+    <p class="synthetic-label"><strong>Заданные учебные цены.</strong> Вход 100 000 USDT за BTC; комиссия 0,1% на входе и выходе. Все суммы учебные.</p>
+    <nav class="experiment-nav" aria-label="Три опыта с плечом">
+      <button id="experiment-0" type="button" data-step="0" aria-pressed="true"><span class="experiment-number">01</span><span><strong>То же количество</strong><small>Что меняет плечо?</small></span><span id="experiment-status-0" class="experiment-status">●</span></button>
+      <button id="experiment-1" type="button" data-step="1" aria-pressed="false" disabled><span class="experiment-number">02</span><span><strong>Та же маржа</strong><small>Что меняет количество?</small></span><span id="experiment-status-1" class="experiment-status">○</span></button>
+      <button id="experiment-2" type="button" data-step="2" aria-pressed="false" disabled><span class="experiment-number">03</span><span><strong>Тот же риск</strong><small>Как сохранить бюджет?</small></span><span id="experiment-status-2" class="experiment-status">○</span></button>
+    </nav>
+    <p id="storage-note" class="storage-note warning" role="status" hidden></p>
+
+    <section id="lesson-complete" class="leverage-complete" aria-labelledby="completion-title" hidden>
+      <img id="completion-mascot" src="assets/mascot-variants/poses-v1/babushka-dance.png" alt="" aria-hidden="true">
+      <div><div class="eyebrow">ТРИ ПРОВЕРКИ ПРОЙДЕНЫ</div><h2 id="completion-title" tabindex="-1">Разные числа. Разный смысл.</h2><p id="completion-praise" class="mascot-praise"></p><p>Ты различаешь количество, начальную маржу и плановый денежный риск. Можешь вернуться к любому опыту.</p><strong id="completion-reward">Достижение «Различаю объём и плечо» · 40 XP</strong></div>
+      <a href="index.html" class="completion-link">К учебному маршруту →</a>
+    </section>
+
+    <section class="experiment-panel" aria-labelledby="experiment-title">
+      <div class="experiment-heading"><div><div id="experiment-count" class="eyebrow">ОПЫТ 1 / 3</div><h2 id="experiment-title" tabindex="-1">Количество одинаковое</h2><p id="experiment-copy"></p></div><span id="experiment-fixed" class="fixed-pill"></span></div>
+      <div class="experiment-controls">
+        <fieldset><legend>Направление позиции</legend><div class="segmented"><button id="side-long" type="button" data-side="long" aria-pressed="true">↗ Лонг</button><button id="side-short" type="button" data-side="short" aria-pressed="false">↘ Шорт</button></div></fieldset>
+        <fieldset><legend>Плечо для сравнения с 1×</legend><div class="segmented leverage-options"><button id="leverage-2" type="button" data-leverage="2" aria-pressed="false">2×</button><button id="leverage-5" type="button" data-leverage="5" aria-pressed="true">5×</button><button id="leverage-10" type="button" data-leverage="10" aria-pressed="false">10×</button></div></fieldset>
+        <p class="control-note">Меняй параметры и наблюдай.<br>За выбор плеча очки не начисляются.</p>
+      </div>
+
+      <div class="position-comparison" aria-label="Количество, стоимость и основная начальная маржа">
+        <article id="baseline-card" class="position-card"><div class="position-card-top"><span>Базовый вариант</span><strong>1×</strong></div><dl><div><dt>Количество BTC</dt><dd id="baseline-quantity"></dd></div><div><dt>Стоимость позиции</dt><dd id="baseline-notional"></dd></div><div class="margin-metric"><dt>Основная начальная маржа</dt><dd id="baseline-margin"></dd></div><div><dt>Комиссия входа отдельно</dt><dd id="baseline-entry-fee"></dd></div></dl></article>
+        <article id="chosen-card" class="position-card chosen-card"><div class="position-card-top"><span>Твоё сравнение</span><strong id="chosen-leverage">5×</strong></div><dl><div><dt>Количество BTC</dt><dd id="chosen-quantity"></dd></div><div><dt>Стоимость позиции</dt><dd id="chosen-notional"></dd></div><div class="margin-metric"><dt>Основная начальная маржа</dt><dd id="chosen-margin"></dd></div><div><dt>Комиссия входа отдельно</dt><dd id="chosen-entry-fee"></dd></div></dl></article>
+      </div>
+      <p class="margin-explanation">Основная маржа = стоимость позиции / плечо при Mark = цене входа. Комиссии считаем отдельно. <strong>Начальная маржа не является пределом максимального убытка.</strong></p>
+
+      <div id="movement-outcomes" class="movement-outcomes">
+        <section class="outcome-panel" aria-labelledby="up-title"><div class="outcome-heading"><h3 id="up-title">Цена ↑ 1%</h3><span>Выход 101 000 USDT</span></div><div class="outcome-comparison"><div><h4>При 1×</h4><dl><div><dt>До комиссий</dt><dd id="baseline-up-gross"></dd></div><div><dt>Комиссия входа</dt><dd id="baseline-up-entry-fee"></dd></div><div><dt>Комиссия выхода</dt><dd id="baseline-up-exit-fee"></dd></div><div><dt>Обе комиссии</dt><dd id="baseline-up-fees"></dd></div><div class="net-metric"><dt>Чистый итог</dt><dd id="baseline-up-net"></dd></div></dl></div><div><h4 class="chosen-outcome-label">При 5×</h4><dl><div><dt>До комиссий</dt><dd id="chosen-up-gross"></dd></div><div><dt>Комиссия входа</dt><dd id="chosen-up-entry-fee"></dd></div><div><dt>Комиссия выхода</dt><dd id="chosen-up-exit-fee"></dd></div><div><dt>Обе комиссии</dt><dd id="chosen-up-fees"></dd></div><div class="net-metric"><dt>Чистый итог</dt><dd id="chosen-up-net"></dd></div></dl></div></div></section>
+        <section class="outcome-panel" aria-labelledby="down-title"><div class="outcome-heading"><h3 id="down-title">Цена ↓ 1%</h3><span>Выход 99 000 USDT</span></div><div class="outcome-comparison"><div><h4>При 1×</h4><dl><div><dt>До комиссий</dt><dd id="baseline-down-gross"></dd></div><div><dt>Комиссия входа</dt><dd id="baseline-down-entry-fee"></dd></div><div><dt>Комиссия выхода</dt><dd id="baseline-down-exit-fee"></dd></div><div><dt>Обе комиссии</dt><dd id="baseline-down-fees"></dd></div><div class="net-metric"><dt>Чистый итог</dt><dd id="baseline-down-net"></dd></div></dl></div><div><h4 class="chosen-outcome-label">При 5×</h4><dl><div><dt>До комиссий</dt><dd id="chosen-down-gross"></dd></div><div><dt>Комиссия входа</dt><dd id="chosen-down-entry-fee"></dd></div><div><dt>Комиссия выхода</dt><dd id="chosen-down-exit-fee"></dd></div><div><dt>Обе комиссии</dt><dd id="chosen-down-fees"></dd></div><div class="net-metric"><dt>Чистый итог</dt><dd id="chosen-down-net"></dd></div></dl></div></div></section>
+      </div>
+
+      <section id="risk-outcomes" class="risk-outcomes" aria-labelledby="risk-heading" hidden>
+        <div class="outcome-heading"><h3 id="risk-heading">Плановый расчёт на стопе</h3><span id="stop-price-label">Стоп 99 000 USDT</span></div>
+        <p class="risk-sizing-note" id="risk-sizing-note"></p>
+        <div class="risk-comparison"><div><h4>При 1×</h4><dl><div><dt>Убыток движения цены</dt><dd id="baseline-stop-gross"></dd></div><div><dt>Комиссия входа</dt><dd id="baseline-stop-entry-fee"></dd></div><div><dt>Комиссия выхода</dt><dd id="baseline-stop-exit-fee"></dd></div><div class="net-metric"><dt>Плановый убыток с расходами</dt><dd id="baseline-risk"></dd></div><div><dt>Резерв обеих комиссий</dt><dd id="baseline-fee-reserve"></dd></div><div class="total-metric"><dt>Маржа + резерв комиссий</dt><dd id="baseline-margin-plus-fees"></dd></div></dl></div><div><h4 id="risk-chosen-label">При 5×</h4><dl><div><dt>Убыток движения цены</dt><dd id="chosen-stop-gross"></dd></div><div><dt>Комиссия входа</dt><dd id="chosen-stop-entry-fee"></dd></div><div><dt>Комиссия выхода</dt><dd id="chosen-stop-exit-fee"></dd></div><div class="net-metric"><dt>Плановый убыток с расходами</dt><dd id="chosen-risk"></dd></div><div><dt>Резерв обеих комиссий</dt><dd id="chosen-fee-reserve"></dd></div><div class="total-metric"><dt>Маржа + резерв комиссий</dt><dd id="chosen-margin-plus-fees"></dd></div></dl></div></div>
+        <p class="risk-footnote">Количество округлено вниз до 8 знаков. На экране денежные суммы округлены до копеек. Расчётный стоп не гарантирует цену исполнения или максимальный фактический убыток.</p>
+      </section>
+      <p class="rounding-note">Денежные суммы округлены отдельно до сотых; итог рассчитан до округления, поэтому возможна разница 0,01 USDT.</p>
+      <div class="experiment-takeaway"><span aria-hidden="true">↳</span><p id="experiment-takeaway"></p></div>
+    </section>
+
+    <section class="leverage-quiz" aria-labelledby="quiz-title">
+      <div id="leverage-coach" class="quiz-coach"><img id="leverage-coach-mascot" src="assets/mascot-variants/poses-v1/babushka-dance.png" alt="" aria-hidden="true"><div><div class="eyebrow">ПРОВЕРЬ СВОЁ НАБЛЮДЕНИЕ</div><h2 id="quiz-title">Один вопрос — и дальше.</h2><p id="leverage-coach-copy">Сначала количество. Потом плечо.</p></div><span id="checks-count">0 / 3 проверок</span></div>
+      <h3 id="quiz-question" tabindex="-1"></h3>
+      <p class="quiz-example-note">Отдельный пример: числа в вопросе могут отличаться от сравнения выше.</p>
+      <div class="quiz-options" aria-label="Варианты ответа"><button id="quiz-answer-0" type="button"></button><button id="quiz-answer-1" type="button"></button><button id="quiz-answer-2" type="button"></button></div>
+      <div id="quiz-feedback" class="leverage-feedback" role="status" aria-live="polite" hidden></div>
+      <button id="retry-question" type="button" class="secondary-action" hidden>Попробовать похожий вопрос →</button>
+      <div class="experiment-actions"><button id="previous-experiment" type="button" class="secondary-action" hidden>← Предыдущий опыт</button><button id="next-experiment" type="button" class="primary-action" disabled>Следующий опыт →</button></div>
+    </section>
+
+    <details class="model-notes"><summary>Что входит в эту учебную модель?</summary><p>Это упрощённая арифметика линейной USDT-модели с заданными ценами. Mark для основной начальной маржи приравнен к цене входа. Комиссия 0,1% за операцию — учебное допущение; это не текущий тариф аккаунта.</p><p>Funding, поддерживающая маржа, ликвидация, биржевые ограничения количества и реальное исполнение здесь не моделируются. Показанная маржа с резервом комиссий не является полной стоимостью биржевого ордера. Числа упражнения не задают личные торговые лимиты.</p><p>Пояснения формул: <a href="https://www.bybit.com/en/help-center/article/Profit-Loss-calculations-USDT-Contract" target="_blank" rel="noopener noreferrer">Bybit: расчёт PnL</a> и <a href="https://www.bybit.com/en/help-center/article/Initial-Margin-USDT-Contract" target="_blank" rel="noopener noreferrer">начальная маржа</a>. Проверены 1 ноября 2026 года. Это наша учебная адаптация, не правило автора книги.</p></details>
+    <section class="personal-practice-card" aria-label="Следующая короткая практика"><div><strong>Следующий шаг для тебя</strong><p id="personal-practice-copy">Новая задача на другом историческом участке.</p><p id="personal-practice-warning" class="storage-note" role="status" hidden></p></div><a href="review.html">К короткой практике →</a></section>
+    <div class="lesson-bottom"><a href="index.html">← К учебному маршруту</a><button id="reset-lesson" type="button" class="text-button">Сбросить только эти три опыта ↺</button></div>
+    <footer class="footer"><span>insweep · пробуй, разбирайся, практикуйся</span><span>Размер → обеспечение → риск</span></footer>
+  <aside id="practice-next-step" class="practice-channel" hidden aria-labelledby="practice-next-title"><p class="practice-channel-kicker">ПРОДОЛЖЕНИЕ INSWEEP</p><h2 id="practice-next-title">Разобрал решение? Продолжим в канале.</h2><p>В Telegram insweep — сетапы и обсуждение рыночных ситуаций. Сравнивай наблюдения со своим учебным планом.</p><a href="https://t.me/+OGSgiII0NUNjNTI6" target="_blank" rel="noopener noreferrer" data-telegram data-placement="result">Открыть бесплатный канал ↗</a><p class="practice-channel-note">Подписка по желанию. Практика остаётся доступной без неё.</p></aside></main>
+<footer class="practice-channel practice-channel-footer"><h2>Пробуй. Разбирайся. Продолжай.</h2><p>Термины, руководства и канал insweep — следующий шаг после упражнения.</p><div><a href="/learn/start/">Маршрут для новичка →</a><a href="https://t.me/+OGSgiII0NUNjNTI6" target="_blank" rel="noopener noreferrer" data-telegram data-placement="footer">Канал insweep ↗</a></div><p class="practice-channel-note">Учебная практика и разборы не гарантируют результат сделки.</p></footer></body>
+</html>

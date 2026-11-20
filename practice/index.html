@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#E4B42F">
+  <title>Бесплатный тренажёр трейдинга на историческом графике — insweep</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="game.css">
+  <link rel="stylesheet" href="comic.css">
+  <link rel="stylesheet" href="babushka.css">
+  <link rel="stylesheet" href="mascot-reactions.css">
+  <link rel="stylesheet" href="personal-practice.css">
+  <link rel="stylesheet" href="chart-first.css">
+  <link rel="stylesheet" href="brand.css">
+  <link rel="stylesheet" href="background.css?v=9">
+  <script src="position.js" defer></script>
+  <script src="plan.js" defer></script>
+  <script src="learning.js" defer></script>
+  <script src="rewards.js" defer></script>
+  <script src="mascot.js" defer></script>
+  <script src="leverage.js" defer></script>
+  <script src="review.js" defer></script>
+  <script src="review-store.js" defer></script>
+  <script src="app.js" defer></script>
+<meta name="description" content="Практика трейдинга для начинающих: виртуальные решения на истории BTCUSDT, учебные комиссии, стоп, цель и собственный план. Бесплатно, без регистрации."><meta name="robots" content="index,follow"><link rel="canonical" href="https://getinsweep.com/practice/"><meta property="og:type" content="website"><meta property="og:title" content="Бесплатный тренажёр трейдинга на историческом графике — insweep"><meta property="og:description" content="Практика трейдинга для начинающих: виртуальные решения на истории BTCUSDT, учебные комиссии, стоп, цель и собственный план. Бесплатно, без регистрации."><meta property="og:url" content="https://getinsweep.com/practice/"><meta property="og:image" content="https://getinsweep.com/practice/assets/brand/insweep-logo.jpg"><link rel="stylesheet" href="portal-return.css"><script type="module" src="/assets/funnel.js"></script></head>
+<body><nav class="portal-return" aria-label="Портал insweep"><a href="/">← Портал insweep</a><a href="/glossary/">Словарь</a><a href="/tools/position-size/">Калькулятор</a><a href="https://t.me/+OGSgiII0NUNjNTI6" target="_blank" rel="noopener noreferrer" data-telegram data-placement="header">Telegram ↗</a></nav>
+  <header class="header">
+    <a class="brand" href="./" aria-label="insweep — начало"><img class="brand-logo" src="assets/brand/insweep-logo.jpg" width="196" height="48" alt="insweep"><span class="brand-sub">playground</span></a>
+    <div class="header-right"><div class="game-header-stats" aria-label="Игровой прогресс"><span class="xp-pill"><strong id="xp-total">0</strong> XP</span><span class="level-pill">Уровень <strong id="level-number">1</strong></span></div><button id="about-button" class="text-button">Как это работает <span aria-hidden="true">↗</span></button></div>
+  </header>
+  <main>
+    <div class="intro"><div class="hero-copy"><div class="eyebrow">ТВОЯ ПЕРВАЯ МИССИЯ / INSWEEP</div><h1>Тренажёр трейдинга:<br>твой первый план.</h1><p>Настоящие графики. Учебные сделки. Собери свой план и пойми, как он работает.</p><button id="start-mission" class="hero-start">Начать миссию →</button></div><div class="hero-art" aria-hidden="true"><img src="assets/mascot-variants/poses-v1/babushka-dance.png" alt=""><span class="hero-speech">Я Сви.<br>Разберём рынок. Без суеты.</span></div></div>
+    <p class="onboarding-outcome"><strong>Твой первый результат:</strong> самостоятельно собрать простой план сделки — вход, стоп, цель и денежный риск.</p>
+    <section id="game-progress" class="game-progress-card" aria-label="Прогресс и цель"><div><div class="rank-summary"><strong id="rank-name">Первый шаг</strong><span id="rank-caption">0 / 30 XP</span></div><div class="game-meter" role="progressbar" aria-label="До следующего уровня" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="rank-meter"><span id="rank-progress"></span></div></div><div><div class="quest-summary"><span id="quest-label">Твоя первая цель: собери 3 значка</span><strong id="quest-count">0 / 3</strong></div><div class="game-meter" role="progressbar" aria-label="Первый набор достижений" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0" id="quest-meter"><span id="quest-progress"></span></div></div></section>
+    <section id="victory-panel" class="victory-panel" hidden aria-label="Миссия пройдена"><div class="victory-art"><img id="victory-mascot" src="assets/mascot-variants/poses-v1/babushka-dance.png" alt=""></div><div class="victory-copy"><div class="eyebrow">ЕЩЁ ОДИН ШАГ ВПЕРЁД</div><h2 id="victory-title">Миссия пройдена!</h2><p id="victory-praise" class="mascot-praise"></p><p id="victory-description"></p><span id="victory-reward"></span></div><button id="victory-next">Следующая миссия →</button></section>
+    <nav class="lesson-nav" aria-label="Учебные занятия"><button data-lesson="intro" aria-pressed="true"><span>01</span> Первая сделка</button><button data-lesson="plan" aria-pressed="false"><span>02</span> План и риск</button><button data-lesson="practice" aria-pressed="false"><span>03</span> Практика</button><button data-lesson="assessment" aria-pressed="false"><span>04</span> Самостоятельный план</button><span class="lesson-nav-note">Один шаг — одно новое решение</span></nav>
+    <section class="personal-practice-card" aria-label="Следующая короткая практика"><div><strong>Следующий шаг для тебя</strong><p id="personal-practice-copy">Новая задача на другом историческом участке.</p><p id="personal-practice-warning" class="storage-note" role="status" hidden></p></div><a href="review.html">К короткой практике →</a></section>
+    <p id="storage-note" class="storage-note" role="status" hidden></p>
+    <div id="workspace" class="workspace">
+      <section class="market-panel" aria-label="График и учебный счёт">
+        <div class="market-header"><div class="asset"><span class="bitcoin" aria-hidden="true">₿</span><div><h2>Биткоин <span>BTC / USDT</span></h2><div class="source">Bybit · исторические спотовые цены</div></div></div><div class="historical-label"><span class="dot"></span>История рынка</div></div>
+        <div class="quote-row"><div><div class="price" id="price">Загружаем историю…</div><div class="price-description">Цена одного BTC в USDT</div></div><div class="market-date"><div id="market-date">—</div><div id="market-time">—</div></div></div>
+        <div id="chart-level-tools" class="chart-level-tools" hidden><div class="chart-pickers" role="group" aria-label="Отметить уровень на графике"><button id="pick-stop" aria-pressed="false">＋ Стоп</button><button id="pick-target" aria-pressed="false">＋ Цель / тейк</button></div><p id="chart-level-instruction">Нажми на график, чтобы поставить уровень. Линии можно перетаскивать.</p><div class="chart-price-slot"><output id="chart-price-preview" class="chart-price-preview" aria-live="off" hidden></output></div></div>
+        <div class="chart-wrap"><svg id="chart" role="img" tabindex="0" aria-describedby="chart-level-instruction" aria-label="Исторический график цены биткоина; будущие минуты скрыты"></svg><div id="chart-error" class="chart-error" hidden></div></div>
+        <div class="chart-footnote"><span><span class="legend-line"></span>Цена закрытия каждой минуты</span><span id="chart-hint">Следующие минуты скрыты</span></div>
+        <div class="replay-bar"><div class="replay-actions"><button id="play-button" class="play-button" disabled aria-label="Запустить историю">▶</button><button id="step-button" class="step-button" disabled>+1 мин</button><select id="speed" aria-label="Скорость воспроизведения"><option value="1100">1 мин / с</option><option value="350">Быстрее</option><option value="2200">Медленнее</option></select></div><div class="replay-detail"><span id="replay-label">Время остановлено</span><span id="replay-count">—</span></div></div>
+        <div class="account"><div><span class="metric-label">Свободные учебные средства</span><strong id="cash">1 000,00 <small>учебных USDT</small></strong></div><div><span class="metric-label" id="holding-label">Выделено на позицию</span><strong id="holding">0,00 <small>USDT</small></strong></div><div><span class="metric-label" id="result-label">Результат сделки</span><strong id="result">—</strong></div></div>
+        <div class="trade-history" id="trade-history" hidden><div class="history-heading">Твои учебные сделки</div><div id="history-list"></div></div>
+      </section>
+      <aside class="lesson-panel" aria-label="Обучение и учебная торговля">
+        <div class="lesson-top"><span id="lesson-title">ПЕРВОЕ ЗНАКОМСТВО</span><span id="lesson-step">01 / 04</span></div><div class="progress" aria-hidden="true"><span id="lesson-progress"></span></div>
+        <div class="lesson-symbol" id="lesson-symbol" aria-hidden="true">↗</div>
+        <div id="coach-card" class="coach-card"><img id="coach-mascot" src="assets/mascot-variants/poses-v1/babushka-dance.png" alt="Бобр Сви, твой помощник"><p id="coach-copy">Один шаг за раз. Начнём?</p></div>
+        <div id="learning-banner" class="learning-banner"></div>
+        <div id="task-card" class="task-card" hidden></div>
+        <div class="learning-tools"><button id="glossary-button" class="inline-action" aria-expanded="false">Словарь терминов</button><a href="#chart" class="inline-action">К графику ↓</a><button id="help-toggle" class="inline-action" hidden aria-expanded="false">Нужна помощь</button></div>
+        <div id="glossary-panel" class="help-panel glossary-list" hidden></div>
+        <div id="help-panel" class="help-panel" hidden></div>
+        <div id="lesson-content" aria-live="polite"></div>
+        <div id="direction-controls" class="direction-switch" role="group" aria-label="Направление учебной сделки"><button type="button" data-side="long" aria-pressed="true"><span>↗ Лонг</span><small>На рост цены</small></button><button type="button" data-side="short" aria-pressed="false"><span>↘ Шорт</span><small>На снижение цены</small></button></div>
+        <div id="prediction-controls" class="intro-prediction" hidden><label class="amount-label" for="direction-prediction">Какое движение цены поможет выбранной позиции?</label><select id="direction-prediction" class="plan-select"><option value="">Выбери движение</option><option value="higher">Цена вырастет</option><option value="lower">Цена снизится</option></select></div>
+        <div id="order-controls">
+          <label class="amount-label" for="amount">Выделить на учебную позицию</label>
+          <div class="amount-input"><input id="amount" type="number" min="1" max="1000" step="1" value="100" inputmode="decimal"><span>USDT</span></div>
+          <div class="presets" aria-label="Примеры учебной суммы"><button data-amount="50">50</button><button data-amount="100" class="selected">100</button><button data-amount="250">250</button></div>
+          <div class="order-estimate" id="order-estimate">—</div>
+        </div>
+        <div id="planning-controls" hidden>
+          <div id="assessment-fields" class="assessment-fields" hidden><label class="amount-label" for="assessment-side">Моё направление</label><select id="assessment-side" class="plan-select"><option value="">Выбери направление</option><option value="long">Лонг</option><option value="short">Шорт</option></select></div>
+          <div id="levels-controls">
+            <div id="selected-levels" class="selected-levels" aria-live="polite"></div>
+            <details id="level-number-details" class="level-number-details"><summary>Уточнить цены вручную</summary>
+            <div class="plan-input-grid"><div><label for="stop-price">Стоп · отмена идеи</label><input id="stop-price" type="number" inputmode="decimal" min="0.01" step="0.01" placeholder="Цена в USDT"></div><div><label for="target-price">Цель / тейк · выход с прибылью</label><input id="target-price" type="number" inputmode="decimal" min="0.01" step="0.01" placeholder="Цена в USDT"></div></div>
+            <button id="sample-levels" class="inline-action">Показать пример уровней</button>
+            </details>
+            <div class="field-note" id="levels-note">Выбирай прямо на графике. Готовые линии и подписи можно перетаскивать; точная цена появится рядом.</div>
+          </div>
+          <div id="risk-controls" hidden>
+            <label class="amount-label" for="risk-budget">Учебный бюджет риска, USDT</label><div class="amount-input"><input id="risk-budget" type="number" inputmode="decimal" min="0.01" step="0.1" value="5"><span>USDT</span></div>
+            <div class="field-note">5 USDT — пример для упражнения. Можешь задать свой учебный бюджет.</div>
+          </div>
+          <div id="condition-controls" hidden>
+            <label class="amount-label" for="entry-condition">Когда разрешён вход?</label><select id="entry-condition" class="plan-select"><option value="">Выбери условие</option><option value="now">На текущей раскрытой цене</option><option value="above">Когда цена не ниже уровня</option><option value="below">Когда цена не выше уровня</option></select>
+            <div id="condition-price-wrap" hidden><label class="amount-label" for="condition-price">Уровень условия, USDT</label><input id="condition-price" class="plan-number" type="number" inputmode="decimal" min="0.01" step="0.01" placeholder="Цена в USDT"></div>
+            <label class="amount-label" for="plan-rationale">Почему здесь стоп?</label><textarea id="plan-rationale" rows="2" maxlength="240" placeholder="Где моя идея перестаёт выполняться…"></textarea>
+          </div>
+          <div id="comprehension-controls" class="assessment-fields" hidden>
+            <label class="amount-label" for="answer-entry">Объясни своё условие входа</label><select id="answer-entry" class="plan-select"><option value="">Выбери объяснение</option><option value="now">Вход разрешён на текущем раскрытом закрытии</option><option value="above">Жду закрытия не ниже указанного уровня</option><option value="below">Жду закрытия не выше указанного уровня</option></select>
+            <label class="amount-label" for="answer-cancel">Что является границей отмены идеи?</label><select id="answer-cancel" class="plan-select"><option value="">Выбери границу</option><option value="stop">Стоп</option><option value="target">Цель</option><option value="entry">Цена входа</option></select>
+            <label class="amount-label" for="answer-loss">Каков расчётный убыток на стопе с расходами?</label><input id="answer-loss" class="plan-number" type="number" inputmode="decimal" min="0.01" step="0.01" placeholder="Учебные USDT">
+            <label class="amount-label" for="answer-sizing">При расчёте только по бюджету риска (без ограничения доступными средствами): если стоп дальше, какой нужен объём?</label><select id="answer-sizing" class="plan-select"><option value="">Выбери ответ</option><option value="smaller">Меньше</option><option value="larger">Больше</option><option value="same">Такой же</option></select>
+          </div>
+          <div id="plan-preview" class="plan-preview" hidden aria-live="polite"></div>
+        </div>
+        <div id="locked-plan" class="locked-plan" hidden></div>
+        <div id="assessment-feedback" class="check-list" aria-live="polite" hidden></div>
+        <div id="mastery-card" class="mastery-card" hidden></div>
+        <button id="check-understanding" class="inline-action" hidden>Проверить понимание плана</button>
+        <button id="retry-practice" class="inline-action" hidden>Отработать ошибку в практике →</button>
+        <button id="retry-assessment" class="inline-action" hidden>Новая самостоятельная попытка →</button>
+        <p id="action-error" class="action-error" role="alert" hidden></p>
+        <button id="primary-action" class="primary-action" disabled>Загружаем данные…</button>
+        <button id="secondary-action" class="secondary-action" hidden>Продолжить историю</button>
+        <button id="tertiary-action" class="inline-action" hidden></button>
+        <div id="quiz" class="quiz" hidden><button data-answer="lower">Результат был бы меньше</button><button data-answer="higher">Результат был бы больше</button><button data-answer="same">Результат не изменился бы</button><div id="quiz-feedback" aria-live="polite"></div></div>
+        <div class="lesson-note" id="lesson-note">Всё происходит внутри тренажёра. Деньги и сделки учебные.</div>
+      </aside>
+    </div>
+    <section id="review-panel" class="review-panel" hidden aria-label="Разбор плана и результата"></section>
+    <div id="decision-history" class="decision-history" hidden></div>
+    <a id="leverage-link" class="next-topic" href="leverage.html"><span class="next-topic-number" aria-hidden="true">05</span><span><strong>Размер позиции, плечо и маржа</strong><small id="leverage-status">Три опыта: от количества BTC к денежному риску</small></span><span aria-hidden="true">→</span></a>
+    <section id="achievement-section" class="achievement-section" aria-label="Коллекция достижений"><div class="section-heading"><h2>Твои маленькие победы <span id="achievement-count">0 / 13</span></h2><p>Каждый значок — конкретный шаг в обучении. Собирай их в своём темпе.</p><button id="path-button" class="path-button">Твой путь <span id="path-caption" class="path-caption">Первое знакомство</span> ↗</button></div><div id="achievement-list" class="achievement-grid"></div></section>
+    <div class="bottom-note"><span class="note-symbol" aria-hidden="true">i</span><p>Учебная модель по закрытиям минут. Стоп и цель проверяются при раскрытии следующего закрытия; выход может пройти уровень и увеличить убыток. Внутриминутное исполнение не моделируется. Комиссия 0,1% за операцию — учебное допущение.</p><button id="restart-button" class="text-button">Начать заново <span aria-hidden="true">↺</span></button></div>
+    <div class="footer"><span>insweep · пробуй, разбирайся, практикуйся</span><span>От первой учебной сделки к самостоятельному плану</span></div>
+  <aside id="practice-next-step" class="practice-channel" hidden aria-labelledby="practice-next-title"><p class="practice-channel-kicker">ПРОДОЛЖЕНИЕ INSWEEP</p><h2 id="practice-next-title">Разобрал решение? Продолжим в канале.</h2><p>В Telegram insweep — сетапы и обсуждение рыночных ситуаций. Сравнивай наблюдения со своим учебным планом.</p><a href="https://t.me/+OGSgiII0NUNjNTI6" target="_blank" rel="noopener noreferrer" data-telegram data-placement="result">Открыть бесплатный канал ↗</a><p class="practice-channel-note">Подписка по желанию. Практика остаётся доступной без неё.</p></aside></main>
+  <div id="reward-toast" class="reward-toast" role="status" aria-live="polite" hidden><img id="reward-mascot" src="assets/mascot-variants/poses-v1/babushka-dance.png" alt=""><div class="reward-copy"><p id="reward-praise" class="mascot-praise"></p><strong id="reward-toast-title"></strong><p id="reward-toast-detail"></p><span id="reward-count"></span></div><button id="dismiss-reward" aria-label="Закрыть уведомление о награде">×</button></div>
+  <dialog id="info-dialog"><div class="dialog-top"><span class="eyebrow" id="dialog-eyebrow">insweep playground</span><button id="close-dialog" aria-label="Закрыть" class="close-dialog">×</button></div><div id="dialog-content" class="path-status"></div></dialog>
+<footer class="practice-channel practice-channel-footer"><h2>Пробуй. Разбирайся. Продолжай.</h2><p>Термины, руководства и канал insweep — следующий шаг после упражнения.</p><div><a href="/learn/start/">Маршрут для новичка →</a><a href="https://t.me/+OGSgiII0NUNjNTI6" target="_blank" rel="noopener noreferrer" data-telegram data-placement="footer">Канал insweep ↗</a></div><p class="practice-channel-note">Учебная практика и разборы не гарантируют результат сделки.</p></footer></body>
+</html>

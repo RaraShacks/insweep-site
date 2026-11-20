@@ -1,0 +1,16 @@
+/* Chart selection is the primary path; exact numeric refinement stays available. */
+.chart-level-tools{flex-wrap:wrap;align-items:flex-start;background:var(--sky-soft,#E6EFF7);border-top:1px solid #BDCFDE;border-bottom:1px solid #BDCFDE;margin-top:18px;padding:14px 24px;gap:10px 16px}
+.chart-level-tools .chart-pickers{display:flex;gap:8px}.chart-level-tools .chart-pickers button{font-size:12px;min-height:42px;font-weight:700}
+.chart-level-tools #chart-level-instruction{flex:1;min-width:180px;color:#314D63;font-size:12px;line-height:1.6}
+.chart-price-slot{flex-basis:100%;height:24px;overflow:hidden}.chart-price-preview{display:block;font-size:13px;font-weight:750;font-variant-numeric:tabular-nums;color:#262822;line-height:24px;white-space:nowrap}
+#chart.editing{outline:2px dashed #9FC0E1;outline-offset:-2px;background:#E6EFF722;border-radius:6px}
+#chart:focus-visible{outline:3px solid #426F96;outline-offset:2px}
+#chart .chart-cursor,#chart .entry-reference{pointer-events:none;user-select:none}
+.selected-levels{display:grid;gap:8px;margin:16px 0}
+.selected-levels>div{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid #C9C8BC;border-radius:8px;background:#FFFCF5;font-size:11px;line-height:1.5}
+.selected-levels strong{font-size:12px;font-variant-numeric:tabular-nums;text-align:right}.selected-levels .stop-value{color:#8F6924}.selected-levels .target-value{color:#426F96}
+.level-number-details{margin:12px 0 8px;border-top:1px solid #C9C8BC;padding-top:10px}
+.level-number-details>summary{cursor:pointer;font-size:11px;color:#426F96;font-weight:650;padding:6px 0;min-height:32px;line-height:1.5}
+.level-number-details>summary:focus-visible{outline:3px solid #426F96;outline-offset:3px}
+.level-number-details .plan-input-grid{margin-top:10px}
+@media(max-width:730px){#workspace[data-chart-first="true"] .market-panel{order:-1}#workspace[data-chart-first="true"] .lesson-panel{order:0}.chart-level-tools{padding:13px 18px;gap:10px}.chart-level-tools #chart-level-instruction{flex-basis:100%;font-size:12px}.chart-level-tools .chart-pickers{width:100%}.chart-level-tools .chart-pickers button{flex:1}.selected-levels>div{font-size:12px}.level-number-details>summary{font-size:12px;min-height:42px}}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#E4B42F">
+  <title>Короткая практика трейдинга и разбор учебных решений — insweep</title>
+  <link rel="stylesheet" href="review.css">
+  <link rel="stylesheet" href="brand.css">
+  <link rel="stylesheet" href="background.css?v=9">
+  <script src="position.js" defer></script>
+  <script src="plan.js" defer></script>
+  <script src="review.js" defer></script>
+  <script src="review-store.js" defer></script>
+  <script src="review-ui.js" defer></script>
+<meta name="description" content="Повтори понятия и разбери учебное решение на историческом участке. Короткие задачи insweep с объяснением ответа и локальным прогрессом."><meta name="robots" content="index,follow"><link rel="canonical" href="https://getinsweep.com/practice/review.html"><meta property="og:type" content="website"><meta property="og:title" content="Короткая практика трейдинга и разбор учебных решений — insweep"><meta property="og:description" content="Повтори понятия и разбери учебное решение на историческом участке. Короткие задачи insweep с объяснением ответа и локальным прогрессом."><meta property="og:url" content="https://getinsweep.com/practice/review.html"><meta property="og:image" content="https://getinsweep.com/practice/assets/brand/insweep-logo.jpg"><link rel="stylesheet" href="portal-return.css"><script type="module" src="/assets/funnel.js"></script></head>
+<body><nav class="portal-return" aria-label="Портал insweep"><a href="/">← Портал insweep</a><a href="/glossary/">Словарь</a><a href="/tools/position-size/">Калькулятор</a><a href="https://t.me/+OGSgiII0NUNjNTI6" target="_blank" rel="noopener noreferrer" data-telegram data-placement="header">Telegram ↗</a></nav>
+  <a class="skip-link" href="#review-prompt">К заданию</a>
+  <header class="review-header">
+    <a class="brand" href="index.html" aria-label="insweep — к учебному маршруту"><img class="brand-logo" src="assets/brand/insweep-logo.jpg" width="196" height="48" alt="insweep"><span class="brand-sub">playground</span></a>
+    <a class="back-link" href="index.html">← К маршруту</a>
+  </header>
+  <main id="review-root" class="review-main">
+    <div class="page-heading"><div><p class="eyebrow">КОРОТКАЯ ПРАКТИКА</p><h1>Разобрать. Попробовать ещё.</h1></div><span class="local-pill">История в этом браузере</span></div>
+    <p id="review-warning" class="notice" role="status" hidden></p>
+    <p id="review-loading" class="loading" role="status">Загружаем исторический участок…</p>
+    <section id="review-unavailable" class="unavailable panel" role="status" hidden>
+      <h2>Пока не можем начать</h2><p id="review-unavailable-copy"></p><button id="review-restart" type="button" hidden>Начать другую задачу</button><a href="index.html">К учебному маршруту →</a>
+    </section>
+    <div class="workspace">
+      <section id="review-task" class="task-card panel" aria-labelledby="review-prompt" hidden>
+        <div class="task-top"><p id="review-topic" class="topic-pill"></p><span id="review-fresh" class="fresh-label"></span></div>
+        <h2 id="review-prompt" tabindex="-1"></h2>
+        <ul id="review-context" class="context-list"></ul>
+        <p class="exercise-note">Условия вопроса заданы для упражнения.</p>
+        <form id="review-answer-form">
+          <fieldset><legend>Твой ответ</legend><div id="review-options" class="answer-options"></div></fieldset>
+          <p id="review-answer-note" class="answer-note" role="alert" hidden>Выбери вариант, прежде чем проверить ответ.</p>
+          <div class="task-actions"><button id="review-submit" type="submit">Проверить ответ <span aria-hidden="true">↗</span></button><button id="review-help" class="secondary" type="button">Нужна подсказка</button></div>
+        </form>
+        <div id="review-help-panel" class="help-panel" role="status" hidden></div>
+        <section id="review-feedback" class="feedback" tabindex="-1" aria-labelledby="review-feedback-title" hidden><h3 id="review-feedback-title"></h3><p id="review-feedback-copy"></p><p id="review-feedback-date" class="feedback-date"></p></section>
+        <button id="review-next" class="next-button" type="button" hidden>Следующая задача →</button>
+        <details class="historical-details"><summary>Исторический участок · 60 закрытых минут</summary>
+          <figure class="market-chart"><div id="review-chart"></div><figcaption id="review-chart-caption"></figcaption></figure>
+          <p class="exercise-note">Будущее движение, уровни и результат в вопросе — учебные допущения, а не продолжение этой истории.</p>
+          <p id="review-source" class="source-note"></p>
+        </details>
+      </section>
+      <aside class="practice-aside">
+        <section class="coach panel" aria-label="Сви помогает"><img id="review-coach-image" src="assets/mascot-reactions/v1/risk.png" alt="Сви, бобр в жёлтом платке, помогает подумать"><div><p class="eyebrow">СВИ НА СВЯЗИ</p><p id="review-coach-copy">Сначала свой ответ. Если застрянешь — разберём шаг вместе.</p></div></section>
+        <section class="history-panel panel" aria-labelledby="history-title"><p class="eyebrow">ОТ ЧЕГО ОТТАЛКИВАЕМСЯ</p><h2 id="history-title">Прошлые проверки</h2><p id="review-history-empty">Здесь пока нет записанных ошибок. Начни с диагностической задачи — прежние ответы мы не восстанавливаем.</p><ul id="review-history" class="history-list"></ul><p class="small-note">Неверный ответ показывает, какой шаг повторить. Это не оценка человека.</p></section>
+      </aside>
+    </div>
+    <section class="topics-panel panel" aria-labelledby="topics-title"><div class="section-heading"><div><p class="eyebrow">СВОЙ ТЕМП</p><h2 id="topics-title">Когда вернуться</h2></div><p>После первого самостоятельного ответа — пауза 24 часа.<br>Это настройка первой версии; даты открыты.</p></div><ul id="review-topics" class="topic-list"></ul><p class="small-note">Проверяем формальные понятия и арифметику. Эти отметки не подтверждают торговое мастерство или прибыльность. За повторные задачи XP не начисляются.</p></section>
+    <footer><span>insweep · учимся принимать решения</span><a href="leverage.html">Опыты с плечом →</a></footer>
+    <noscript><p class="notice">Для упражнений нужен JavaScript. <a href="index.html">Вернуться к маршруту.</a></p></noscript>
+  <aside id="practice-next-step" class="practice-channel" hidden aria-labelledby="practice-next-title"><p class="practice-channel-kicker">ПРОДОЛЖЕНИЕ INSWEEP</p><h2 id="practice-next-title">Разобрал решение? Продолжим в канале.</h2><p>В Telegram insweep — сетапы и обсуждение рыночных ситуаций. Сравнивай наблюдения со своим учебным планом.</p><a href="https://t.me/+OGSgiII0NUNjNTI6" target="_blank" rel="noopener noreferrer" data-telegram data-placement="result">Открыть бесплатный канал ↗</a><p class="practice-channel-note">Подписка по желанию. Практика остаётся доступной без неё.</p></aside></main>
+<footer class="practice-channel practice-channel-footer"><h2>Пробуй. Разбирайся. Продолжай.</h2><p>Термины, руководства и канал insweep — следующий шаг после упражнения.</p><div><a href="/learn/start/">Маршрут для новичка →</a><a href="https://t.me/+OGSgiII0NUNjNTI6" target="_blank" rel="noopener noreferrer" data-telegram data-placement="footer">Канал insweep ↗</a></div><p class="practice-channel-note">Учебная практика и разборы не гарантируют результат сделки.</p></footer></body>
+</html>

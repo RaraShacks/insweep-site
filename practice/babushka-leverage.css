@@ -1,0 +1,359 @@
+/* Babushka's cream, yellow and washed-blue print palette.
+   Keep this after leverage.css and babushka.css; lesson behaviour is unchanged. */
+.leverage-page {
+  --paper: #f4f0e5;
+  --surface: #fffcf5;
+  --ink: #262822;
+  --muted: #686a60;
+  --line: #d4cebf;
+  --gold: #e4b42f;
+  --gold-soft: #f5e8b5;
+  --sky: #9fc0e1;
+  --sky-strong: #426f96;
+  --sky-soft: #e6eff7;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.leverage-page .lesson-back,
+.leverage-page .lesson-bottom a,
+.leverage-page .model-notes a { color: var(--sky-strong); }
+.leverage-page .lesson-back:hover,
+.leverage-page .lesson-bottom a:hover,
+.leverage-page .model-notes a:hover { color: var(--ink); }
+
+.leverage-page .leverage-hero {
+  background: var(--surface);
+  border-color: var(--ink);
+  color: var(--ink);
+  box-shadow: 6px 6px 0 var(--gold);
+}
+.leverage-page .leverage-hero::before {
+  width: 37%;
+  height: 140%;
+  top: -24%;
+  right: -3%;
+  background:
+    linear-gradient(90deg, #fffcf580 50%, transparent 50%) 0 0 / 28px 28px,
+    linear-gradient(#fffcf580 50%, transparent 50%) 0 0 / 28px 28px,
+    var(--sky);
+  border-left: 12px solid var(--gold);
+  transform: rotate(8deg);
+}
+.leverage-page .leverage-hero .eyebrow {
+  background: var(--gold);
+  color: var(--ink);
+}
+.leverage-page .leverage-hero h1 { color: var(--ink); }
+.leverage-page .leverage-hero h1 span { color: var(--sky-strong); }
+.leverage-page .leverage-hero p { color: var(--muted); }
+.leverage-page .leverage-mascot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: auto;
+  min-height: 230px;
+}
+.leverage-page .leverage-mascot img {
+  height: 230px;
+  flex: 0 0 auto;
+  filter: drop-shadow(4px 5px 0 #426f9626);
+  transform: rotate(-3deg);
+}
+.leverage-page .leverage-mascot span {
+  position: relative;
+  inset: auto;
+  flex: 0 0 auto;
+  align-self: center;
+  max-width: 220px;
+  text-align: center;
+  transform: rotate(-2deg);
+  color: var(--ink);
+  background: var(--gold-soft);
+  border-color: var(--ink);
+  box-shadow: 3px 3px 0 var(--sky-strong);
+}
+.leverage-page .synthetic-label {
+  color: var(--muted);
+  border-left-color: var(--gold);
+}
+.leverage-page .synthetic-label strong { color: var(--ink); }
+
+.leverage-page .experiment-nav button {
+  color: var(--ink);
+  background: var(--surface);
+  border-color: var(--ink);
+  box-shadow: 3px 3px 0 var(--line);
+}
+.leverage-page .experiment-nav small { color: var(--muted); }
+.leverage-page .experiment-nav button:hover:not(:disabled) {
+  background: var(--sky-soft);
+  box-shadow: 3px 3px 0 var(--sky-strong);
+}
+.leverage-page .experiment-nav button[aria-pressed="true"] {
+  background: var(--gold-soft);
+  color: var(--ink);
+  box-shadow: 4px 4px 0 var(--gold);
+}
+.leverage-page .experiment-nav button[aria-pressed="true"] small { color: var(--muted); }
+.leverage-page .experiment-nav button[aria-pressed="true"] .experiment-number {
+  color: var(--ink);
+  background: var(--gold);
+  border-color: var(--ink);
+}
+.leverage-page .experiment-nav button.is-complete .experiment-number {
+  color: var(--ink);
+  background: var(--sky);
+  border-color: var(--ink);
+}
+.leverage-page .experiment-nav button:disabled {
+  opacity: .6;
+  box-shadow: 2px 2px 0 var(--line);
+}
+.leverage-page .experiment-status { color: var(--sky-strong); }
+
+.leverage-page .experiment-panel {
+  background: var(--surface);
+  border-color: var(--ink);
+  border-top-color: var(--gold);
+  box-shadow: 5px 5px 0 var(--line);
+}
+.leverage-page .fixed-pill {
+  background: var(--sky-soft);
+  border-color: var(--sky);
+  color: var(--sky-strong);
+}
+.leverage-page .experiment-controls { border-color: var(--line); }
+.leverage-page .experiment-controls legend,
+.leverage-page .control-note { color: var(--muted); }
+.leverage-page .segmented button {
+  color: var(--ink);
+  border-color: var(--ink);
+  background: var(--surface);
+  box-shadow: 2px 2px 0 var(--line);
+}
+.leverage-page .segmented button:hover:not(:disabled) { background: var(--sky-soft); }
+.leverage-page .segmented button[aria-pressed="true"] {
+  color: var(--ink);
+  background: var(--gold);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.leverage-page .leverage-options button[aria-pressed="true"] {
+  color: var(--ink);
+  background: var(--sky);
+}
+.leverage-page .position-card {
+  background: var(--paper);
+  border-color: var(--line);
+}
+.leverage-page .position-card-top {
+  color: var(--ink);
+  background: #e9e4d6;
+  border-color: var(--line);
+}
+.leverage-page .chosen-card { border-color: var(--sky); }
+.leverage-page .chosen-card .position-card-top {
+  background: var(--sky-soft);
+  color: var(--ink);
+  border-color: var(--sky);
+}
+.leverage-page .position-card dt,
+.leverage-page .margin-explanation { color: var(--muted); }
+.leverage-page .position-card dd,
+.leverage-page .margin-explanation strong { color: var(--ink); }
+.leverage-page .position-card .margin-metric { border-color: var(--line); }
+.leverage-page .position-card .margin-metric dt { color: var(--ink); }
+.leverage-page .position-card .margin-metric dd { color: var(--sky-strong); }
+
+.leverage-page .outcome-panel,
+.leverage-page .risk-outcomes {
+  background: var(--surface);
+  border-color: var(--line);
+}
+.leverage-page .outcome-heading {
+  background: var(--gold-soft);
+  border-color: var(--line);
+  color: var(--ink);
+}
+.leverage-page .outcome-heading > span { color: var(--muted); }
+.leverage-page .outcome-comparison > div + div,
+.leverage-page .risk-comparison > div + div {
+  background: #edf2f3;
+  border-color: var(--line);
+}
+.leverage-page .outcome-comparison h4,
+.leverage-page .risk-comparison h4 { color: var(--sky-strong); }
+.leverage-page .outcome-comparison dt,
+.leverage-page .risk-comparison dt { color: var(--muted); }
+.leverage-page .outcome-comparison dd,
+.leverage-page .risk-comparison dd { color: var(--ink); }
+.leverage-page .outcome-comparison .net-metric,
+.leverage-page .risk-comparison .net-metric,
+.leverage-page .risk-comparison .total-metric { border-color: var(--line); }
+.leverage-page .outcome-comparison .net-metric dt,
+.leverage-page .risk-comparison .net-metric dt { color: var(--ink); }
+.leverage-page .outcome-comparison dd.positive-value { color: var(--sky-strong); }
+.leverage-page .outcome-comparison dd.negative-value {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+.leverage-page .risk-comparison .net-metric dd { color: var(--ink); }
+.leverage-page .risk-sizing-note {
+  color: var(--ink);
+  background: var(--sky-soft);
+  border-color: var(--line);
+}
+.leverage-page .risk-footnote {
+  color: var(--muted);
+  background: var(--paper);
+  border-color: var(--line);
+}
+.leverage-page .rounding-note,
+.leverage-page .quiz-example-note { color: var(--muted); }
+.leverage-page .experiment-takeaway {
+  color: var(--ink);
+  background: var(--gold-soft);
+  border-left-color: var(--gold);
+}
+.leverage-page .experiment-takeaway > span { color: var(--sky-strong); }
+
+.leverage-page .leverage-quiz {
+  background: var(--surface);
+  border-color: var(--ink);
+  box-shadow: 5px 5px 0 var(--sky);
+}
+.leverage-page .quiz-coach > span { color: var(--sky-strong); }
+.leverage-page .quiz-coach img {
+  background: var(--gold-soft);
+  border-radius: 50%;
+  filter: none;
+}
+.leverage-page .quiz-options button {
+  color: var(--ink);
+  background: var(--surface);
+  border-color: #a8aa9b;
+}
+.leverage-page .quiz-options button:hover:not(:disabled) {
+  border-color: var(--sky-strong);
+  background: var(--sky-soft);
+  box-shadow: 2px 2px 0 var(--sky-strong);
+}
+.leverage-page .quiz-options button:disabled {
+  background: var(--paper);
+  border-color: var(--line);
+  color: var(--muted);
+  box-shadow: none;
+}
+.leverage-page .quiz-options button.correct {
+  color: var(--ink);
+  background: var(--sky);
+  border-color: var(--ink);
+  box-shadow: 3px 3px 0 var(--sky-strong);
+}
+.leverage-page .quiz-options button.wrong {
+  color: var(--ink);
+  background: var(--gold-soft);
+  border-color: #9b7515;
+  box-shadow: inset 0 -3px 0 var(--gold);
+}
+.leverage-page .leverage-feedback {
+  color: var(--ink);
+  background: var(--sky-soft);
+  border-color: var(--sky);
+  border-left-color: var(--sky-strong);
+}
+.leverage-page .leverage-feedback.is-wrong {
+  color: var(--ink);
+  background: var(--gold-soft);
+  border-color: #c9aa58;
+  border-left-color: #9b7515;
+}
+.leverage-page .experiment-actions .primary-action {
+  color: var(--ink);
+  background: var(--gold);
+  border-color: var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.leverage-page .experiment-actions .primary-action:hover:not(:disabled) { background: #efc74f; }
+.leverage-page .experiment-actions .primary-action:disabled {
+  color: var(--muted);
+  background: #e6e1d3;
+  border-color: var(--line);
+  box-shadow: 2px 2px 0 var(--line);
+  opacity: 1;
+}
+.leverage-page .secondary-action {
+  color: var(--ink);
+  background: var(--surface);
+  border-color: var(--ink);
+  box-shadow: 2px 2px 0 var(--sky);
+}
+.leverage-page .secondary-action:hover:not(:disabled) { background: var(--sky-soft); }
+
+.leverage-page .leverage-complete {
+  color: var(--ink);
+  background: var(--gold-soft);
+  border-color: var(--ink);
+  box-shadow: 5px 5px 0 var(--gold);
+}
+.leverage-page .leverage-complete .eyebrow { color: var(--ink); }
+.leverage-page .leverage-complete p { color: var(--muted); }
+.leverage-page .leverage-complete #completion-reward {
+  color: var(--ink);
+  background: var(--gold);
+}
+.leverage-page .completion-link {
+  color: var(--ink);
+  background: var(--surface);
+  border-color: var(--ink);
+  box-shadow: 3px 3px 0 var(--sky-strong);
+}
+.leverage-page .completion-link:hover { background: var(--sky-soft); }
+.leverage-page .model-notes {
+  color: var(--muted);
+  background: #eae5d8;
+  border-color: var(--line);
+}
+.leverage-page .model-notes summary { color: var(--ink); }
+.leverage-page .lesson-bottom .text-button { color: var(--muted); }
+.leverage-page .storage-note.warning {
+  color: var(--ink);
+  background: var(--gold-soft);
+  border-color: #c9aa58;
+}
+.leverage-page :is(button, a, summary):focus-visible {
+  outline: 3px solid var(--sky-strong);
+  outline-offset: 4px;
+}
+.leverage-page :is(h2, h3)[tabindex="-1"]:focus-visible {
+  outline: 2px dashed var(--sky-strong);
+  outline-offset: 5px;
+}
+
+@media (max-width: 730px) {
+  .leverage-page .leverage-mascot {
+    width: min(100%, 250px);
+    margin: 15px auto 3px;
+    min-height: 0;
+    gap: 8px;
+  }
+  .leverage-page .leverage-mascot img { height: 205px; }
+  .leverage-page .leverage-mascot span { max-width: 205px; font-size: 9px; }
+  .leverage-page .leverage-hero::before {
+    width: 53%;
+    height: 66%;
+    top: 44%;
+    right: -10%;
+    border-left-width: 8px;
+    background-size: 22px 22px, 22px 22px, auto;
+  }
+  .leverage-page .experiment-panel { box-shadow: 4px 4px 0 var(--line); }
+  .leverage-page .leverage-quiz { box-shadow: 4px 4px 0 var(--sky); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .leverage-page .leverage-mascot img { transform: none; }
+}

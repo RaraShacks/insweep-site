@@ -1,0 +1,47 @@
+/* Approved wordmark: display the original square JPEG without stretching it. */
+.header,
+.review-header {
+  background: #000;
+  color: #fff;
+  border-bottom-color: #000;
+}
+
+.header .brand,
+.review-header .brand,
+.header .header-right .text-button,
+.review-header .back-link {
+  color: #fff;
+}
+
+.header .brand-sub,
+.review-header .brand-sub {
+  color: #f4f0e5;
+  border-color: #ffffff40;
+}
+
+.header a:focus-visible,
+.header button:focus-visible,
+.review-header a:focus-visible {
+  outline-color: #9fc0e1;
+}
+
+.brand {
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  display: block;
+  width: 196px;
+  height: 48px;
+  flex: none;
+  object-fit: cover;
+  object-position: center;
+  background: #000;
+}
+
+@media (max-width: 680px) {
+  .brand-logo {
+    width: 150px;
+    height: 38px;
+  }
+}

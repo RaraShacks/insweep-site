@@ -1,0 +1,296 @@
+/* insweep: Svi reacts to skills, one moment at a time.
+   Load last, after babushka.css and babushka-leverage.css.
+   A newly visible reward gets one short entrance; coach changes stay quiet.
+   data-emotion/data-pose label the current reaction; images keep their full canvas. */
+
+.coach-card {
+  align-items: center;
+  gap: 10px;
+  padding: 12px 10px;
+  min-width: 0;
+  border: 2px solid var(--ink);
+  background: var(--sky-soft);
+  box-shadow: 3px 3px 0 var(--sky);
+  overflow: visible;
+}
+.coach-card img {
+  display: block;
+  flex: 0 0 100px;
+  width: 100px;
+  height: 116px;
+  max-width: 38%;
+  padding: 4px;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+  filter: drop-shadow(2px 3px 0 #2628221a);
+}
+#coach-copy {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid var(--ink);
+  border-radius: 10px 10px 10px 2px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.7;
+  font-weight: 550;
+  overflow-wrap: anywhere;
+}
+.coach-card[data-reaction='intro-mastered'],
+.coach-card[data-reaction='practice'],
+.coach-card[data-reaction='independent'],
+.coach-card[data-reaction='leverage-basics'] {
+  background: var(--gold-soft);
+  box-shadow: 3px 3px 0 var(--gold);
+}
+
+/* Character and voice lead. The achievement and XP remain readable below. */
+.reward-toast {
+  display: grid;
+  grid-template-columns: 128px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 15px;
+  row-gap: 5px;
+  width: min(470px, calc(100% - 48px));
+  max-width: 470px;
+  max-height: min(420px, calc(100dvh - 48px));
+  min-height: 190px;
+  padding: 20px 38px 20px 15px;
+  border: 2px solid var(--ink);
+  border-radius: 14px 14px 3px 14px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 6px 6px 0 var(--gold), 0 10px 32px #2628221f;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: var(--sky-strong) var(--paper);
+}
+.reward-toast[hidden] { display: none; }
+.reward-toast::before { display: none; }
+#reward-mascot {
+  display: block;
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  align-self: center;
+  width: 128px;
+  height: 156px;
+  max-width: 100%;
+  padding: 4px;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+  filter: drop-shadow(3px 3px 0 #426f9626);
+}
+.reward-copy,
+#reward-praise,
+#reward-toast-title,
+#reward-toast-detail {
+  grid-column: 2;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.reward-copy { align-self: center; }
+#reward-praise {
+  grid-row: 1;
+  align-self: end;
+  margin: 0 0 5px;
+  color: var(--ink);
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 750;
+  letter-spacing: -.45px;
+}
+#reward-toast-title {
+  grid-row: 2;
+  align-self: center;
+  color: var(--sky-strong);
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: 700;
+}
+#reward-toast-detail {
+  grid-row: 3;
+  align-self: start;
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+#reward-count {
+  grid-column: 2;
+  grid-row: 4;
+  min-width: 0;
+  margin: 3px 0 0;
+  color: var(--sky-strong);
+  font-size: 10px;
+  line-height: 1.6;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+#reward-count:empty { display: none; }
+#dismiss-reward {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 25px;
+  line-height: 1;
+  z-index: 1;
+}
+#dismiss-reward:hover { background: var(--gold-soft); }
+#dismiss-reward:focus-visible { outline-offset: -5px; }
+
+/* The square source canvas includes hands, feet and a wide paddle tail. */
+.victory-panel { overflow: visible; }
+.victory-art {
+  flex: 0 0 156px;
+  width: 156px;
+  min-width: 0;
+  padding: 4px;
+}
+.victory-art img {
+  width: 100%;
+  height: 164px;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+#victory-praise,
+.leverage-page #completion-praise {
+  color: var(--ink);
+  font-size: 20px;
+  line-height: 1.45;
+  font-weight: 750;
+  letter-spacing: -.4px;
+  margin: 9px 0;
+}
+.victory-panel::before { opacity: .5; pointer-events: none; transform: none; }
+
+.leverage-page .quiz-coach {
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+.leverage-page .quiz-coach img {
+  display: block;
+  width: 112px;
+  height: 132px;
+  padding: 5px;
+  flex: 0 0 112px;
+  object-fit: contain;
+  object-position: center;
+  background: var(--gold-soft);
+  border-radius: 14px;
+  transform: none;
+}
+.leverage-page .quiz-coach > div { flex: 1; min-width: 0; }
+.leverage-page #leverage-coach-copy {
+  margin: 10px 0 0;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 550;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.leverage-page .quiz-coach > span { white-space: normal; line-height: 1.7; }
+.leverage-page .leverage-complete { overflow: visible; }
+.leverage-page .leverage-complete > img {
+  display: block;
+  width: 156px;
+  height: 164px;
+  padding: 4px;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+
+.reward-toast:not([hidden]) #reward-mascot {
+  animation: svi-reaction-enter .36s cubic-bezier(.2,.8,.2,1) both;
+}
+@keyframes svi-reaction-enter {
+  from { opacity: .3; transform: translateY(7px) scale(.95); }
+  65% { opacity: 1; transform: translateY(-2px) scale(1.015); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 1150px) and (min-width: 731px) {
+  .coach-card { display: block; padding: 10px; }
+  .coach-card img { width: 110px; height: 112px; max-width: 100%; margin: 0 auto 6px; }
+  #coach-copy { padding: 10px 12px; }
+  .victory-art { flex-basis: 138px; width: 138px; }
+  .victory-art img { height: 146px; }
+}
+@media (max-width: 1000px) and (min-width: 731px) {
+  .victory-copy { flex-basis: calc(100% - 165px); }
+  #victory-next { margin-left: 156px; }
+}
+@media (max-width: 730px) {
+  .coach-card { gap: 10px; padding: 10px; }
+  .coach-card img { flex-basis: 104px; width: 104px; height: 120px; max-width: 36%; }
+  #coach-copy { font-size: 12px; line-height: 1.7; padding: 10px; }
+  .reward-toast {
+    right: 5%;
+    bottom: calc(112px + env(safe-area-inset-bottom, 0px));
+    width: 90%;
+    max-width: none;
+    max-height: min(380px, calc(100dvh - 156px - env(safe-area-inset-bottom, 0px)));
+    min-height: 166px;
+    grid-template-columns: 100px minmax(0, 1fr);
+    column-gap: 10px;
+    row-gap: 4px;
+    padding: 16px 36px 16px 10px;
+    border-radius: 12px 12px 3px 12px;
+    box-shadow: 4px 4px 0 var(--gold), 0 8px 24px #26282226;
+  }
+  #reward-mascot { width: 100px; height: 130px; padding: 2px; }
+  #reward-praise { font-size: 17px; line-height: 1.4; letter-spacing: -.25px; }
+  #reward-toast-title { font-size: 11px; line-height: 1.6; }
+  #reward-toast-detail { font-size: 10px; line-height: 1.7; }
+  #reward-count { font-size: 9px; }
+  #dismiss-reward { top: 1px; right: 1px; width: 44px; height: 44px; }
+  .victory-panel { gap: 12px; padding: 16px; }
+  .victory-art { flex-basis: 104px; width: 104px; padding: 2px; }
+  .victory-art img { height: 120px; }
+  .victory-copy { flex-basis: calc(100% - 116px); }
+  #victory-praise,
+  .leverage-page #completion-praise { font-size: 17px; line-height: 1.5; }
+  #victory-next { margin-left: 0; }
+  .leverage-page .quiz-coach { gap: 12px; align-items: flex-start; }
+  .leverage-page .quiz-coach img { flex-basis: 96px; width: 96px; height: 110px; padding: 3px; }
+  .leverage-page .quiz-coach > div { flex-basis: calc(100% - 108px); }
+  .leverage-page .quiz-coach > span { flex-basis: 100%; margin: 0; }
+  .leverage-page #leverage-coach-copy { font-size: 12px; line-height: 1.75; }
+  .leverage-page .leverage-complete { gap: 12px; }
+  .leverage-page .leverage-complete > img { width: 104px; height: 120px; padding: 2px; }
+  .leverage-page .leverage-complete > div { flex-basis: calc(100% - 116px); min-width: 0; }
+}
+@media (max-width: 370px) {
+  .coach-card { display: block; }
+  .coach-card img { width: 110px; max-width: 100%; margin: 0 auto 6px; }
+  .reward-toast { grid-template-columns: 92px minmax(0, 1fr); column-gap: 7px; }
+  #reward-mascot { width: 92px; }
+  #reward-praise { font-size: 16px; }
+  .victory-panel { display: block; }
+  .victory-art { width: 130px; margin: 0 auto 10px; }
+  .victory-art img { height: 130px; }
+  #victory-next { margin-top: 15px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .coach-card img,
+  #reward-mascot,
+  .victory-art img,
+  .leverage-page .quiz-coach img,
+  .leverage-page .leverage-complete > img {
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

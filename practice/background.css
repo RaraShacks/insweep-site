@@ -1,0 +1,30 @@
+/* Warm paper with the original insweep wordmark in a white, gently tilted pattern. */
+body {
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+  background: var(--paper, #f4f0e5);
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("assets/brand/insweep-white-pattern-v1.svg");
+  background-repeat: repeat;
+  background-size: 480px 220px;
+  /* The source is white on black: screen keeps white and blends black into paper. */
+  mix-blend-mode: screen;
+}
+
+body::after {
+  content: none;
+}
+
+@media (max-width: 680px) {
+  body::before {
+    background-size: 360px 165px;
+  }
+}

@@ -1,0 +1,317 @@
+/* insweep / Babushka edition. Load after comic.css and leverage.css.
+   Palette follows the selected original dancing beaver: cream, gold, sky.
+   The earlier custom-property names remain aliases for shared game styles. */
+:root {
+  --paper:#F4F0E5; --surface:#FFFCF5; --ink:#262822; --muted:#686A60;
+  --line:#D4CEBF; --gold:#E4B42F; --gold-soft:#F5E8B5;
+  --sky:#9FC0E1; --sky-strong:#426F96; --sky-soft:#E6EFF7;
+  --stop:#86601D; --stop-soft:#F3E5C4; --stop-line:#B28A40;
+  --purple:var(--sky-strong); --lime:var(--gold); --coral:var(--stop);
+  --red:var(--gold); --shadow:5px 5px 0 var(--ink);
+  --soft-shadow:3px 3px 0 var(--line);
+  background:var(--paper); color:var(--ink); accent-color:var(--sky-strong);
+}
+body { background:var(--paper); color:var(--ink); }
+::selection { background:var(--gold); color:var(--ink); }
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,
+textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible {
+  outline:3px solid var(--sky-strong); outline-offset:4px;
+}
+.header { background:var(--paper); border-bottom-color:var(--ink); }
+.brand,.brand svg,.header-right .text-button { color:var(--ink); }
+.brand-sub { color:var(--muted); border-color:var(--line); }
+.xp-pill { background:var(--gold); color:var(--ink); }
+.level-pill { background:var(--sky); color:var(--ink); }
+.xp-pill,.level-pill { border-color:var(--ink); box-shadow:3px 3px 0 var(--ink); }
+
+/* A light printed cover, with a windowpane nod to the beaver's suit. */
+.intro,.leverage-hero {
+  background:var(--surface); color:var(--ink); border-color:var(--ink);
+  box-shadow:6px 6px 0 var(--sky); isolation:isolate;
+}
+.intro::before,.leverage-hero::before {
+  background-color:var(--sky);
+  background-image:linear-gradient(#426F9626 1px,transparent 1px),linear-gradient(90deg,#426F9626 1px,transparent 1px);
+  background-size:19px 19px;
+  border-left-color:var(--gold);
+}
+.intro .eyebrow,.leverage-hero .eyebrow {
+  background:var(--gold); color:var(--ink);
+}
+.intro h1,.intro h1::first-line,.leverage-hero h1 { color:var(--ink); text-shadow:none; }
+.intro h1 { max-width:770px; }
+.leverage-hero h1 span { color:var(--sky-strong); }
+.intro p,.leverage-hero p { color:var(--muted); }
+.hero-start {
+  background:var(--gold); border-color:var(--ink); color:var(--ink);
+  box-shadow:4px 4px 0 var(--ink);
+}
+.hero-start:hover:not(:disabled) { background:#EFC34A; box-shadow:5px 5px 0 var(--ink); }
+.hero-start:active:not(:disabled) { box-shadow:1px 1px 0 var(--ink); }
+.hero-art::before {
+  background:var(--gold-soft); border:2px solid var(--ink);
+  box-shadow:13px -10px 0 var(--sky-strong);
+}
+.hero-art>img { filter:drop-shadow(4px 6px 0 #26282230); }
+.hero-speech,.leverage-mascot span {
+  background:var(--surface); color:var(--ink); border-color:var(--ink);
+  box-shadow:4px 4px 0 var(--gold);
+}
+.leverage-mascot img { filter:drop-shadow(4px 4px 0 #426F9638); }
+.eyebrow,.dialog-top .eyebrow { color:var(--sky-strong); }
+.onboarding-outcome,.synthetic-label { color:var(--muted); border-left-color:var(--gold); }
+.onboarding-outcome strong,.synthetic-label strong { color:var(--ink); }
+
+/* Route and progress. */
+.game-progress-card { background:var(--surface); border-color:var(--ink); }
+#rank-name,#quest-label,#quest-count { color:var(--ink); }
+#rank-caption { color:var(--muted); }
+.game-meter { background:#E6E0D2; border-color:var(--ink); }
+.game-meter>span { background:var(--sky-strong); }
+#quest-progress { background:var(--gold); }
+.lesson-nav button,.experiment-nav button { background:var(--surface); color:var(--ink); border-color:var(--ink); }
+.lesson-nav button:hover:not(:disabled),.experiment-nav button:hover:not(:disabled) {
+  border-color:var(--ink); box-shadow:4px 4px 0 var(--sky);
+}
+.lesson-nav button[aria-pressed='true'],.experiment-nav button[aria-pressed='true'] {
+  background:var(--gold-soft); color:var(--ink); border-color:var(--ink);
+  box-shadow:4px 4px 0 var(--gold);
+}
+.lesson-nav button .mission-copy small,.experiment-nav small { color:var(--muted); }
+.lesson-nav button[aria-pressed='true'] .mission-copy small,
+.experiment-nav button[aria-pressed='true'] small { color:#555A4F; }
+.lesson-nav .mission-number { background:var(--paper); border-color:var(--ink); color:var(--ink); }
+.lesson-nav button[aria-pressed='true'] .mission-number,
+.lesson-nav button.is-complete .mission-number,
+.lesson-nav button.is-complete[aria-pressed='true'] .mission-number,
+.experiment-nav button[aria-pressed='true'] .experiment-number,
+.experiment-nav button.is-complete .experiment-number {
+  background:var(--gold); border-color:var(--ink); color:var(--ink);
+  box-shadow:2px 2px 0 var(--ink);
+}
+.lesson-nav button.is-complete,.lesson-nav button.is-complete[aria-pressed='true'] {
+  border-color:var(--ink); box-shadow:4px 4px 0 var(--sky);
+}
+.mission-state,.experiment-status { color:var(--sky-strong); }
+.market-panel,.lesson-panel,.review-panel,.experiment-panel,.leverage-quiz {
+  background:var(--surface); border-color:var(--ink);
+}
+.lesson-panel,.experiment-panel { border-top-color:var(--gold); }
+
+/* Keep the price, stop and target visually distinct in every direction. */
+.bitcoin { background:var(--gold); color:var(--ink); border-color:var(--ink); box-shadow:2px 2px 0 var(--sky); }
+.asset h2,.market-date { color:var(--ink); }
+.asset h2 span,.source,.historical-label,.price-description,#market-time,.chart-footnote { color:var(--muted); }
+.dot { background:var(--sky-strong); }
+.legend-line { background:var(--ink); }
+.chart-level-tools .chart-pickers button { background:var(--surface); color:var(--ink); border-color:var(--ink); }
+.chart-level-tools #pick-stop { color:var(--stop); border-color:var(--stop); }
+.chart-level-tools #pick-target { color:var(--sky-strong); border-color:var(--sky-strong); }
+.chart-level-tools #pick-stop[aria-pressed='true'] { background:var(--stop-soft); color:var(--stop); border-color:var(--stop); }
+.chart-level-tools #pick-target[aria-pressed='true'] { background:var(--sky-soft); color:var(--sky-strong); border-color:var(--sky-strong); }
+.chart-level-tools p { color:var(--muted); }
+#chart.picking { background:#E6EFF76B; }
+.chart-error { background:var(--paper); color:var(--stop); }
+#chart path[stroke='#7974c8'] { stroke:var(--ink); }
+#chart circle[fill='#7974c8'] { fill:var(--gold); stroke:var(--surface); }
+#chart stop { stop-color:var(--sky); }
+#chart line[stroke='#eeefe9'] { stroke:#E2DDD0; }
+#chart text[fill='#a1a598'] { fill:var(--muted); }
+#chart [data-level='stop'] line:not(.level-hit) { stroke:var(--stop); }
+#chart [data-level='stop'] rect { fill:var(--stop-soft); stroke:var(--stop); }
+#chart [data-level='stop'] text { fill:var(--stop); }
+#chart [data-level='target'] line:not(.level-hit) { stroke:var(--sky-strong); }
+#chart [data-level='target'] rect { fill:var(--sky-soft); stroke:var(--sky-strong); }
+#chart [data-level='target'] text { fill:var(--sky-strong); }
+#chart [stroke='#9aab76'] { stroke:var(--ink); }
+#chart [fill='#727f50'],#chart [fill='#869665'] { fill:var(--ink); }
+#chart [fill='#747b6c'] { fill:var(--sky-strong); }
+.replay-bar { background:var(--paper); border-color:var(--line); }
+.play-button { background:var(--ink); color:var(--surface); border-color:var(--ink); box-shadow:2px 2px 0 var(--gold); }
+.step-button { background:var(--surface); color:var(--ink); border-color:var(--ink); }
+.replay-detail,#replay-count,.replay-actions select { color:var(--muted); }
+.account { background:var(--surface); }
+.metric-label,.account small { color:var(--muted); }
+.account strong { color:var(--ink); }
+
+/* Coaching, inputs and answers. */
+.lesson-top { color:var(--ink); }
+.progress { background:#E6E0D2; }
+.progress span { background:var(--gold); }
+.coach-card { background:var(--gold-soft); border-color:#D8C58B; border-left-color:var(--ink); }
+#coach-copy { color:#514F3E; }
+.learning-banner { background:var(--sky-soft); border-color:#C0D1DF; color:#475F71; }
+.learning-banner strong { color:#314D63; }
+#lesson-content h2,.task-card h3 { color:var(--ink); }
+#lesson-content p { color:var(--muted); }
+#lesson-content .explain { background:var(--sky-soft); border-color:#C0D1DF; border-left-color:var(--sky-strong); color:#475F71; }
+.task-card,.help-panel { background:var(--paper); color:#555D50; border-color:var(--line); }
+.task-card .eyebrow { color:var(--sky-strong); }
+.direction-switch button,.segmented button { background:var(--surface); color:var(--muted); border-color:var(--ink); }
+.direction-switch button[aria-pressed='true'][data-side='long'] {
+  background:var(--sky-soft); color:var(--ink); border-color:var(--ink); box-shadow:3px 3px 0 var(--sky-strong);
+}
+.direction-switch button[aria-pressed='true'][data-side='short'] {
+  background:var(--gold-soft); color:var(--ink); border-color:var(--ink); box-shadow:3px 3px 0 var(--gold);
+}
+.amount-label,.plan-input-grid label,.assessment-fields label,.intro-prediction label { color:#555D50; }
+.amount-input { background:var(--surface); border-color:var(--ink); }
+.amount-input:focus-within { border-color:var(--sky-strong); }
+.amount-input input { color:var(--ink); }
+.amount-input span { color:var(--muted); }
+.plan-input-grid input,.plan-number,.plan-select,#plan-rationale,
+.assessment-fields input,.assessment-fields select,.assessment-fields textarea,.intro-prediction select {
+  background:var(--surface); color:var(--ink); border-color:#989B8D;
+}
+input::placeholder,textarea::placeholder { color:#777B6D; opacity:1; }
+.presets button { background:var(--surface); border-color:#AEB0A0; color:var(--muted); }
+.presets button.selected { background:var(--gold-soft); border-color:var(--stop-line); color:var(--ink); }
+.order-estimate,.field-note,.lesson-panel .field-note,.lesson-panel .lesson-note,.optional { color:var(--muted); }
+.primary-action,.primary-action[data-side='short'] {
+  background:var(--gold); color:var(--ink); border-color:var(--ink); box-shadow:4px 4px 0 var(--ink);
+}
+.primary-action:hover:not(:disabled) { background:#EFC34A; box-shadow:5px 5px 0 var(--ink); }
+.primary-action:active:not(:disabled) { box-shadow:1px 1px 0 var(--ink); }
+.secondary-action { background:var(--surface); border-color:var(--ink); color:var(--ink); }
+.inline-action,.learning-tools .inline-action,.lesson-tools button,.lesson-tools a { color:var(--sky-strong); }
+.action-error { background:var(--stop-soft); color:var(--stop); border-color:var(--stop-line); border-left-color:var(--stop); }
+.quiz button { background:var(--surface); color:#4B5548; border-color:#A5AD9D; }
+.quiz button.correct { background:var(--sky-soft); color:#314D63; border-color:var(--sky-strong); box-shadow:3px 3px 0 var(--sky); }
+.quiz button.wrong { background:var(--stop-soft); color:var(--stop); border-color:var(--stop-line); }
+#quiz-feedback { color:#475F71; }
+.plan-preview,.locked-plan { background:var(--paper); border-color:var(--line); }
+.plan-preview>div,.locked-plan>div:not(.locked-levels) { color:var(--muted); border-color:var(--line); }
+.plan-preview strong,.locked-plan strong { color:var(--ink); }
+.plan-preview p,.locked-plan p,.locked-levels { color:var(--muted); }
+.mastery-card { background:var(--sky-soft); color:#314D63; border-color:var(--ink); box-shadow:4px 4px 0 var(--sky); }
+.mastery-card h3 { color:var(--ink); }
+.mastery-card p { color:#475F71; }
+.check-list li { background:var(--stop-soft); color:var(--stop); border-color:#D7BD8C; }
+.check-list li.ok,.check-list .passed { background:var(--sky-soft); color:#314D63; border-color:#AFC6D8; }
+
+/* Report, celebration and collection. */
+.review-heading h2 { color:var(--ink); }
+.review-table>div { color:var(--muted); border-color:var(--line); }
+.review-table>div>span:first-child { color:var(--ink); }
+.review-table>div.review-table-head { color:var(--muted); }
+.review-checks { background:var(--sky-soft); border-color:#BDCFDE; }
+.review-checks p { color:#475F71; }
+.report-explanation { background:var(--gold-soft); color:#68572B; border-color:#D8C58B; }
+.review-rationale,.review-rationale strong { color:var(--muted); }
+.result-breakdown { background:var(--paper); color:#555D50; border-color:var(--line); }
+.history-heading,.history-row,.decision-history,.decision-history strong { color:var(--muted); }
+.history-row { border-color:var(--line); }
+.history-row>span:last-child { color:var(--ink); }
+.history-row>span:nth-child(3) { color:var(--muted); }
+.victory-panel,.leverage-complete { background:var(--gold-soft); color:var(--ink); border-color:var(--ink); box-shadow:6px 6px 0 var(--gold); }
+.victory-panel::before {
+  background:radial-gradient(circle,#426F9633 1px,transparent 1.5px) 0 0/6px 6px;
+  border-right-color:var(--sky);
+}
+.victory-copy .eyebrow,.leverage-complete .eyebrow { color:var(--ink); }
+.victory-copy h2,.leverage-complete h2 { color:var(--ink); }
+.victory-copy p,.leverage-complete p { color:#5A5D4D; }
+#victory-reward,.leverage-complete #completion-reward { background:var(--gold); border-color:var(--ink); color:var(--ink); }
+#victory-next,.completion-link { background:var(--surface); color:var(--ink); border-color:var(--ink); box-shadow:4px 4px 0 var(--sky-strong); }
+.victory-art img { filter:drop-shadow(3px 3px 0 #426F9638); }
+.reward-toast { background:var(--ink); color:var(--surface); border-color:var(--surface); box-shadow:5px 5px 0 var(--gold); }
+.reward-toast::before { color:var(--gold); }
+#reward-toast-title { color:var(--surface); }
+#reward-toast-detail { color:#D9DFD2; }
+#dismiss-reward { color:var(--surface); border-color:#8C9684; }
+.section-heading h2 { color:var(--ink); }
+.section-heading p,#achievement-count { color:var(--muted); }
+.achievement-card { background:#E8E4D9; color:#72766A; border-color:#B5B8A9; box-shadow:3px 3px 0 #B5B8A9; }
+.achievement-card strong { color:#565C4F; }
+.achievement-card p,.achievement-xp { color:var(--muted); }
+.achievement-icon { background:#DCDCCD; color:#7A8471; border-color:#AFB5A2; }
+.achievement-card.is-earned { background:var(--surface); color:var(--ink); border-color:var(--ink); box-shadow:4px 4px 0 var(--gold); }
+.achievement-card.is-earned .achievement-icon { background:var(--gold); color:var(--ink); border-color:var(--ink); box-shadow:3px 3px 0 var(--sky); }
+.achievement-card.is-earned strong { color:var(--ink); }
+.achievement-card.is-earned p { color:var(--muted); }
+.achievement-card.is-earned .achievement-xp { color:var(--sky-strong); }
+.path-button { background:var(--surface); color:var(--ink); border-color:var(--ink); }
+.path-caption { color:var(--muted); }
+.path-icon { background:var(--gold); color:var(--ink); }
+.next-topic { background:var(--sky-soft); color:var(--ink); border-color:var(--ink); box-shadow:4px 4px 0 var(--sky); }
+.next-topic:hover { box-shadow:5px 5px 0 var(--gold); }
+.next-topic-number { background:var(--gold); color:var(--ink); border-color:var(--ink); }
+.next-topic small { color:var(--muted); }
+.next-topic.is-complete { background:var(--gold-soft); color:var(--ink); border-color:var(--ink); box-shadow:4px 4px 0 var(--sky); }
+.next-topic.is-complete:hover { box-shadow:5px 5px 0 var(--gold); }
+.next-topic.is-complete .next-topic-number { background:var(--gold); color:var(--ink); border-color:var(--ink); }
+.next-topic.is-complete strong { color:var(--ink); }
+.next-topic.is-complete small { color:var(--muted); }
+.storage-note { color:var(--muted); }
+.storage-note.warning { background:var(--stop-soft); color:var(--stop); border-color:#D7BD8C; }
+.bottom-note p,.bottom-note button,.note-symbol { color:var(--muted); }
+.note-symbol { border-color:#8D9581; }
+.footer { color:var(--muted); border-color:var(--line); }
+dialog { background:var(--surface); color:var(--ink); border-color:var(--ink); box-shadow:7px 7px 0 var(--gold),0 20px 100px #26282255; }
+dialog::backdrop { background:#262822AA; }
+dialog h2,.glossary-list dt { color:var(--ink); }
+dialog p,dialog li,dialog li span,.glossary-list dd,.glossary-list p { color:var(--muted); }
+dialog li { border-color:var(--line); }
+dialog a { color:var(--sky-strong); }
+dialog .path-status { background:var(--sky-soft); color:#475F71; }
+.close-dialog { background:var(--ink); color:var(--surface); border-color:var(--ink); }
+
+/* The separate lesson shares the same palette, including generated results. */
+.lesson-back,.lesson-bottom a,.model-notes a { color:var(--sky-strong); }
+.quiz-example-note,.rounding-note,.control-note { color:var(--muted); }
+.fixed-pill { background:var(--sky-soft); color:#314D63; border-color:#AFC6D8; }
+.experiment-controls { border-color:var(--line); }
+.experiment-controls legend { color:var(--muted); }
+.segmented button[aria-pressed='true'] { background:var(--gold-soft); color:var(--ink); box-shadow:2px 2px 0 var(--gold); }
+.leverage-options button[aria-pressed='true'] { background:var(--sky); color:var(--ink); }
+.position-card { background:var(--paper); border-color:var(--line); }
+.position-card-top { background:#E8E3D6; border-color:var(--line); color:var(--ink); }
+.chosen-card { border-color:#8DAFCA; }
+.chosen-card .position-card-top { background:var(--sky-soft); border-color:#B7CDDF; color:#314D63; }
+.position-card dt { color:var(--muted); }
+.position-card .margin-metric { border-color:var(--line); }
+.position-card .margin-metric dt { color:#475540; }
+.position-card .margin-metric dd { color:#314D63; }
+.margin-explanation { color:var(--muted); }
+.margin-explanation strong { color:#4B5548; }
+.outcome-panel,.risk-outcomes { background:var(--surface); border-color:#BFC6B4; }
+.outcome-heading { background:var(--paper); border-color:var(--line); }
+.outcome-heading>span { color:var(--muted); }
+.outcome-comparison>div+div,.risk-comparison>div+div { background:#F0F5F7; border-left-color:#CDDAE2; }
+.outcome-comparison h4,.risk-comparison h4 { color:#314D63; }
+.outcome-comparison dt,.risk-comparison dt { color:var(--muted); }
+.outcome-comparison dd,.risk-comparison dd { color:var(--ink); }
+.outcome-comparison .net-metric,.risk-comparison .net-metric { border-color:#C7D3DB; }
+.outcome-comparison .net-metric dt,.risk-comparison .net-metric dt { color:#475F71; }
+.outcome-comparison dd.positive-value { color:var(--sky-strong); }
+.outcome-comparison dd.negative-value,.risk-comparison .net-metric dd { color:var(--stop); }
+.risk-comparison .total-metric { border-color:#A9BCCA; }
+.risk-sizing-note { background:var(--sky-soft); color:#475F71; border-color:#C3D3DF; }
+.risk-footnote { background:var(--paper); color:var(--muted); border-color:var(--line); }
+.experiment-takeaway { background:var(--gold-soft); color:var(--ink); border-left-color:var(--gold); }
+.experiment-takeaway>span { color:var(--sky-strong); }
+.quiz-coach>span { color:var(--sky-strong); }
+.quiz-options button { background:var(--surface); color:#4B5548; border-color:#A5AD9D; }
+.quiz-options button:hover:not(:disabled) { background:var(--sky-soft); border-color:var(--sky-strong); box-shadow:2px 2px 0 var(--sky); }
+.quiz-options button:disabled { background:var(--paper); color:#7B8072; border-color:var(--line); }
+.quiz-options button.correct { background:var(--sky-soft); color:#314D63; border-color:var(--sky-strong); box-shadow:3px 3px 0 var(--sky); }
+.quiz-options button.wrong { background:var(--stop-soft); color:var(--stop); border-color:var(--stop-line); }
+.leverage-feedback { background:var(--sky-soft); color:#475F71; border-color:#BDCFDE; border-left-color:var(--sky-strong); }
+.leverage-feedback.is-wrong { background:var(--stop-soft); color:var(--stop); border-color:#D7BD8C; border-left-color:var(--stop); }
+.model-notes { background:#EAE6DB; color:#555D50; border-color:#C7C7B7; }
+
+@media(max-width:730px) {
+  .intro,.leverage-hero { box-shadow:5px 5px 0 var(--sky); }
+  .intro::before,.leverage-hero::before { background-size:16px 16px; }
+  .hero-art>img { width:235px; height:226px; }
+  .hero-art { height:auto; min-height:226px; padding:0 0 4px; }
+  .hero-art::before { box-shadow:9px -7px 0 var(--sky-strong); }
+  #primary-action,#primary-action:hover:not(:disabled) { box-shadow:4px 4px 0 var(--ink),0 8px 24px #26282230; }
+  .victory-panel { box-shadow:5px 5px 0 var(--gold); }
+  .xp-pill,.level-pill { box-shadow:2px 2px 0 var(--ink); }
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
+  .hero-art>img,.hero-speech,.leverage-mascot img,.leverage-mascot span,
+  .xp-pill,.level-pill,.achievement-card.is-earned .achievement-icon { transform:none; }
+}
